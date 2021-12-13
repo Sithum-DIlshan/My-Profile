@@ -1,0 +1,158 @@
+#one {
+    background-color: red;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+}
+
+#two {
+    background-color: green;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#three {
+    background-color: yellow;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#four {
+    background-color: deeppink;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#cornerCircle1 {
+    height: 18vw;
+    width: 18vw;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    left: -9%;
+    top: -9vw;
+
+}
+
+#cornerCircle2 {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 0 0 0 100%;
+    background-color: white;
+    position: absolute;
+    right: 0%;
+    /* top: -25vw;*/
+}
+
+#cornerCircle3 {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 0 100% 0 0;
+    background-color: white;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+
+    /* top: -25vw;*/
+}
+
+#cornerCircle4 {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 100% 0 0 0;
+    background-color: white;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    /* top: -25vw;*/
+}
+
+section > div {
+    width: 18vw;
+    border-radius: 100%;
+    height: 18vw;
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+}
+
+
+section div > div {
+    width: 7vw;
+    /* border-radius: 100%; */
+    height: 7vw;
+    position: absolute;
+    background-color: red;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#halfCircle1 {
+    height: 7vw;
+    width: 14vw;
+    border-radius: 0 0 18vw 18vw;
+    /* border-bottom-right-radius: 100%; */
+    /* border-bottom-left-radius: 100%; */
+    background-color: #ffffff;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    /* top: 0; */
+    margin: auto;
+}
+
+#halfCircle2 {
+    height: 7vw;
+    width: 14vw;
+    border-radius: 18vw 18vw 0 0;
+    /* border-bottom-right-radius: 100%; */
+    /* border-bottom-left-radius: 100%; */
+    background-color: #ffffff;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 0;
+    /* top: 0; */
+    margin: auto;
+}
+
+#middleSquare {
+    position: absolute;
+    width: 14vw;
+    height: 14vw;
+    margin: auto;
+    background-color: white;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+}
+
+#middleSquareCircle {
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    border-radius: 100%;
+    background-color: red;
+    margin: auto;
+    left: 4.5%;
+    right: 4.5%;
+    bottom: 4.5%;
+    top: 4.5%;
+}
