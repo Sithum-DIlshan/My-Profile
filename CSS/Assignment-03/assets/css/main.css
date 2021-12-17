@@ -1,0 +1,132 @@
+
+
+body > section:nth-child(1) {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+body > section:nth-child(2), section:nth-child(3), section:nth-child(4) {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    left: 8px;
+}
+
+
+#outerCircle {
+    width: 250px;
+    height: 250px;
+    border: 20px solid #bb9382;
+    border-radius: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#innerCircle {
+    width: 246px;
+    height: 246px;
+    border: 10px solid #ff0000;
+    border-radius: 100%;
+    position: fixed;
+
+}
+
+#sec1 {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#sec2 {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#sec3 {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#floatingCircle1 {
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    background-color: #a1007b;
+    border-radius: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#floatingCircle2 {
+    width: 246px;
+    height: 246px;
+    background-color: #0093c2;
+    border-radius: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 57px;
+}
+
+#floatingCircle3 {
+    width: 246px;
+    height: 246px;
+    background-color: #ff3e3e;
+    border-radius: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.p1 {
+    font-family: Ubuntu;
+    font-size: 24px;
+    color: #e7e7e7;
+    display: inline;
+    margin: auto;
+    font-weight: bold;
+}
+
+#longP {
+    width: 30px;
+    text-align: center;
+}
+
+#longPHolder {
+    /*position: absolute;*/
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100px;
+}
+
+#lP {
+    font-family: Ubuntu;
+    display: inline;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    color: #e7e7e7;
+    font-weight: bold;
+}
