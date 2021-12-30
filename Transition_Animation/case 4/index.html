@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="normalize.css" rel="stylesheet">
+</head>
+<style>
+    main {
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        /* position: relative;*/
+        overflow-x: hidden;
+    }
+
+    main > section {
+        width: 400%;
+        height: 100%;
+        /*  background-color: deeppink;*/
+        display: flex;
+        animation-name: slider;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        /*position: relative;*/
+        animation-iteration-count: infinite;
+    }
+
+    main > section > div:nth-child(1) {
+        /* background: url("../../assests/images/img1.jpg");*/
+        height: 100%;
+        width: 25%;
+        background-color: red;
+        /*border: 20px solid black;*/
+        background: url("../../assests/images/img1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    main > section > div:nth-child(2) {
+        /* background: url("../../assests/images/img1.jpg");*/
+        height: 100%;
+        width: 25%;
+        background-color: #094494;
+        /*border: 20px solid black;*/
+        background: url("../../assests/images/84260.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    main > section > div:nth-child(3) {
+        /* background: url("../../assests/images/img1.jpg");*/
+        height: 100%;
+        width: 25%;
+        background-color: #c8ff00;
+        /*border: 20px solid black;*/
+        background: url("../../assests/images/sha.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    main > section > div:nth-child(4) {
+        /* background: url("../../assests/images/img1.jpg");*/
+        height: 100%;
+        width: 25%;
+        background-color: #440269;
+        /*
+        border: 20px solid black;
+        */
+        background: url("../../assests/images/spi.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    @keyframes slider {
+        0%, 20% {
+            transform: translateX(0);
+        }
+        25%, 45% {
+            transform: translateX(-25%);
+        }
+        50%, 70% {
+            transform: translateX(-50%);
+        }
+        75%, 95% {
+            transform: translateX(-75%);
+        }
+       /* 100% {
+            transform: translateX(0);
+        }*/
+    }
+</style>
+<body>
+<main>
+    <section>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </section>
+</main>
+</body>
+</html>
