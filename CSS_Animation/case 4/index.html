@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case 6</title>
+    <style>
+        main > section > div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 0px;
+            width: 0px;
+            /*background-color: #c8ff00;*/
+            border: 2px solid red;
+            border-radius: 100%;
+            animation-name: water;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes water {
+            0%{
+                height: 0px;
+                width: 0px;
+                opacity: 2;
+            }
+
+            100%{
+                height: 400px;
+                width: 400px;
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div>
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

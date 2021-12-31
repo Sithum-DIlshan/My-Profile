@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CSS/CSS.iml" filepath="$PROJECT_DIR$/CSS/CSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSS_Animation/CSS_Animation.iml" filepath="$PROJECT_DIR$/CSS_Animation/CSS_Animation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSS_Transition/CSS_Transition.iml" filepath="$PROJECT_DIR$/CSS_Transition/CSS_Transition.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyProfile.iml" filepath="$PROJECT_DIR$/.idea/MyProfile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Transition_Animation/Transition_Animation.iml" filepath="$PROJECT_DIR$/Transition_Animation/Transition_Animation.iml" />
     </modules>
   </component>
 </project>
