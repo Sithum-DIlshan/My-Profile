@@ -9,10 +9,16 @@
      <img src="assets/images/web.jpg" width="300">
      <img src="assets/images/css.png" width="300">
      <p><a href="nextPage.html">Navigate Next Page</a></p>-->
-    <link href="Transition_Animation/case%205/assets/css/normalize.css" rel="stylesheet">
-    <style>
-        /*        *{overflow-x:hidden;}
-            */</style>
+    <meta name="theme-color" content="#F40064" />
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&family=Lato:wght@300&family=Montserrat:wght@300;500&family=Open+Sans&display=swap"
+          rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a439b50eb0.js"></script>
+    <base rel="noopener noreferrer" target="_blank">
+    <link href="responsive.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
 <style>
     /*  #head {
@@ -31,14 +37,6 @@
             !*position: relative;*!
             !*bottom: 100px;*!
         }*/
-    #head {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        max-width: 100%;
-        margin: auto;
-        background-color: deeppink;
-    }
 
     /*#nav{
         !*width: 100vw;
@@ -62,6 +60,7 @@
         margin: auto;
         display: flex;
         justify-content: center;
+        z-index: 10;
     }
 
     header > img {
@@ -70,7 +69,7 @@
         max-width: 100%;
     }
 
-    main > section > nav > ul {
+    main > section:nth-child(1) > nav > ul {
         list-style: none;
         width: 100vw;
         max-width: 100%;
@@ -82,30 +81,1272 @@
         padding: 0;
     }
 
-    main > section > nav {
+    main > section:nth-child(1) > nav {
         max-width: 100%;
     }
 
-    main > section > nav > ul > li {
-        display: inline;
+    main > section:nth-child(1) > nav > ul > li {
         font-family: Ubuntu;
         color: white;
         /* padding: 30px; */
+        height: 28px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
     }
+
+    .menu:hover {
+        transition-property: background-color;
+        transition-duration: 1s;
+        cursor: pointer;
+        background-color: #585858;
+    }
+
+    /*   main > section > nav > ul > div {
+           width: 100px;
+           height: 28px;
+           display: flex;
+           justify-items: center;
+           align-items: center;
+
+       }*/
+
+    main > section:nth-child(2) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 19px;
+        color: #3a3a3a;
+        padding-top: 20px;
+        padding-left: 60px;
+        padding-bottom: 28px;
+    }
+
+    main > section:nth-child(2) {
+        height: 560px;
+    }
+
+    #pImg {
+        width: 38vw;
+        height: 26vw;
+        background: url("assets/images/busi.jpg");
+        background-size: cover;
+        border-radius: 8px;
+    }
+
+    #holder {
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    #pDesc {
+        width: 535px;
+        height: 381px;
+    }
+
+    main > section:nth-child(2) > div > div > p:nth-child(2) {
+        padding-top: 28px;
+        padding-left: 98px;
+    }
+
+    main > section:nth-child(2) > div > div > p {
+        font-family: Ubuntu;
+        color: #494949;
+    }
+
+    main > section:nth-child(3) {
+        height: 448px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    main > section:nth-child(3) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 21px;
+        padding-bottom: 50px;
+        color: #717171;
+    }
+
+    main > section:nth-child(3) > div {
+        width: 55vw;
+        height: 30vw;
+        background: url("assets/images/Screenshot 2022-01-08 12:02:57.png");
+        background-size: cover;
+        alignment: center;
+    }
+
+    main > section:nth-child(4) > h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        padding-bottom: 26px;
+        color: #000000;
+    }
+
+    main > section:nth-child(4) {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F5F5F5;
+        width: 100%;
+
+    }
+
+    main > section:nth-child(4) > div {
+        width: 80%;
+        height: 30px;
+        padding-bottom: 40px;
+    }
+
+    main > section:nth-child(4) > div > nav > ul {
+        list-style: none;
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        height: 3vw;
+        align-items: center;
+        padding: 0;
+    }
+
+    main > section:nth-child(4) > div > nav {
+        max-width: 100%;
+    }
+
+    main > section:nth-child(4) > div > nav > ul > li {
+        font-family: Ubuntu;
+        color: #635C73;
+        /* padding: 30px; */
+        font-size: 16.8px;
+        height: 28px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    main > section:nth-child(4) > div > nav > ul > li > a {
+        text-decoration: none;
+        color: #635C73;
+    }
+
+    .pMenu:hover {
+        transition-property: background-color;
+        transition-duration: 1s;
+        cursor: pointer;
+        background-color: #F40064;
+        color: white;
+    }
+
+    .pMenu:hover a {
+        color: white;
+    }
+
+    #javaProjects {
+        height: 22vw;
+        width: 100%;
+        /* background-color: yellow;*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    main > section:nth-child(5) {
+        width: 100%;
+        height: 500px;
+        /*display: flex;
+        flex-direction: column;
+        align-items: center;*/
+    }
+
+    main > section:nth-child(5) > div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    main > section:nth-child(5) > div:nth-child(1) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 21px;
+        color: #313131;
+        border-bottom: 2px solid #4d4d4d;
+    }
+
+
+    /* @keyframes skillBar {
+         0% {
+             height: 50px;
+             width: 500px;
+         }
+
+         50% {
+             width: 100vw;
+             max-width: 100%;
+         }
+     }*/
+    main > section:nth-child(5) > div:nth-child(2) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    main > section:nth-child(5) > div:nth-child(2) > div {
+        width: 160px;
+        height: 160px;
+        /* border: 12px solid #494e56; */
+        border-radius: 100%;
+        /* transform: rotate(
+    -45deg
+    ); */
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #java {
+        background: url("assets/images/java.png");
+        background-size: cover;
+        display: flex;
+        /* justify-items: center; */
+        /* align-items: center; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #html {
+        background: url("assets/images/html.png");
+        background-size: cover;
+    }
+
+    #css {
+        background: url("assets/images/css.png");
+        background-size: cover;
+    }
+
+    #javaScript {
+        background: url("assets/images/js.png");
+        background-size: cover;
+    }
+
+    #mysql {
+        background: url("assets/images/sql.png");
+        background-size: cover;
+    }
+
+    #javaCircle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 1vw;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        animation: skillJava 8s linear forwards;
+        animation-iteration-count: infinite;
+    }
+
+    main > section:nth-child(5) > div:nth-child(2) > *:hover {
+        transform: scale(1.08);
+        transition-property: transform;
+        transition-duration: 0.25s;
+    }
+
+    #htmlCircle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 1vw;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        animation: skillHtml 8s linear forwards;
+        animation-iteration-count: infinite;
+    }
+
+    #cssCircle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 1vw;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        animation: skillCss 8s linear forwards;
+        animation-iteration-count: infinite;
+    }
+
+    #jsCircle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 1vw;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        animation: skillJs 8s linear forwards;
+        animation-iteration-count: infinite;
+    }
+
+    #mySqlCircle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 1vw;
+        stroke-dasharray: 472;
+        stroke-dashoffset: 472;
+        animation: skillMysql 8s linear forwards;
+        animation-iteration-count: infinite;
+    }
+
+    svg {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* z-index: 1000; */
+    }
+
+    @keyframes skillJava {
+        40%, 100% {
+            stroke-dashoffset: 94.4;
+        }
+    }
+
+    @keyframes skillHtml {
+        40%, 100% {
+            stroke-dashoffset: 188.8;
+        }
+    }
+
+    @keyframes skillCss {
+        40%, 100% {
+            stroke-dashoffset: 283.2;
+        }
+    }
+
+    @keyframes skillJs {
+        40%, 100% {
+            stroke-dashoffset: 448.4;
+        }
+    }
+
+    @keyframes skillMysql {
+        40%, 100% {
+            stroke-dashoffset: 141.6;
+        }
+    }
+
+    #percentageHolder {
+        width: 100%;
+        height: 20px;
+        /*
+        background-color: #F40064;
+        */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /*#percentageHolder > div {
+        width: 130px;
+        height: 20px;
+        !*
+        background-color: yellow;
+        *!
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #555;
+        font-family: 'Lato', sans-serif;
+        font-weight: 1000;
+        font-size: 20px;
+    }*/
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        grid-gap: 20px;
+    }
+
+    .img1 {
+        height: 400px;
+        background: url("assets/images/360Hotel.jpg");
+        background-size: cover;
+        grid-row: 1/3;
+        width: 600px;
+        border-radius: 8px;
+    }
+
+    .img2 {
+        background: url("assets/images/1978935.jpg");
+        background-size: cover;
+        height: 200px;
+        width: 300px;
+        border-radius: 8px;
+    }
+
+    .img3 {
+        background: url("assets/images/GettyImages-956508114-7b41928.jpg");
+        background-size: cover;
+        height: 200px;
+        width: 300px;
+        border-radius: 8px;
+    }
+
+    main > section:nth-child(6) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    main > section:nth-child(6) > div:nth-child(1) {
+        width: 100vw;
+        max-width: 100%;
+        position: absolute;
+        padding-bottom: 610px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main > section:nth-child(6) > div:nth-child(1) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: #313131;
+        border-bottom: 2px solid #4d4d4d;
+        font-size: 20px;
+    }
+
+    footer {
+        width: 100vw;
+        max-width: 100%;
+        height: 308px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    footer > section:nth-child(1) {
+        width: 52%;
+        height: 100%;
+        /* background-color: #F40064; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > section:nth-child(2) {
+        position: absolute;
+        width: 22%;
+        height: 100%;
+        /* background-color: yellow; */
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .footermenu {
+        list-style: none;
+        font-family: 'Dekko', cursive;
+        font-weight: 600;
+        color: rgba(234, 234, 234, 0.93);
+        padding-top: 30px;
+        margin-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #footerList {
+        padding-inline-start: 0px;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(2) {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+        width: calc(100% / 3);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+        width: calc(100% / 3);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) > div > img {
+        height: 120px;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(1) > div:nth-child(3) {
+        width: calc(100% / 3);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(1) > h1 {
+        font-size: 12px;
+        width: 100px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: #DFDFDF;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+        width: 27%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+        width: 73%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(3) {
+        width: 27%;
+        height: 90%;
+        background-color: #F5F5F5;
+    }
+
+    #emailTxt {
+        width: 278px;
+        height: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        border: 0;
+    }
+
+    #btnSubmit {
+        width: 93px;
+        height: 35px;
+        background-color: #CE0000;
+        border: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        color: #dedede;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    #emailField {
+        padding-right: 4px;
+    }
+
+    footer > section:nth-child(3) {
+        position: absolute;
+        width: 22%;
+        height: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > section:nth-child(3) > div:nth-child(1) {
+        width: 100%;
+        height: 50%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer > section:nth-child(3) > div:nth-child(2) {
+        width: 100%;
+        height: 50%;
+        max-width: 100%;
+    }
+
+    footer > section:nth-child(3) > div:nth-child(1) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        color: #d9d9d9;
+        font-weight: 600;
+
+    }
+
+    footer > section:nth-child(3) > div:nth-child(2) > div:nth-child(1) {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer > section:nth-child(3) > div:nth-child(2) > div:nth-child(2) {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    footer > section:nth-child(3) > div:nth-child(2) > div:nth-child(1) > h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        color: #d9d9d9;
+        font-weight: 600;
+
+    }
+
+    footer > section:nth-child(3) > div:nth-child(2) > div:nth-child(2) > a > i {
+        color: #F5F5F5;
+        font-size: 22px;
+    }
+
+    #head {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        margin: auto;
+        overflow-x: hidden;
+    }
+
+    #head > div:nth-child(1) {
+        width: 400%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        animation-name: slider;
+        animation-duration: 10s;
+        animation-direction: alternate;
+        /*position: relative;*/
+        animation-iteration-count: infinite;
+    }
+
+    #head > div:nth-child(1) > div:nth-child(1) {
+        width: 25%;
+        height: 100%;
+        background: url("assets/images/filler.png");
+        background-size: cover;
+    }
+
+    #head > div:nth-child(1) > div:nth-child(2) {
+        width: 25%;
+        height: 100%;
+        background: url("assets/images/imagecompressor/keagan-compressed.jpg");
+        background-size: cover;
+    }
+
+    #head > div:nth-child(1) > div:nth-child(3) {
+        width: 25%;
+        height: 100%;
+        background: url("assets/images/imagecompressor/fotis-fotopoulos-6sAl6aQ4OWI-unsplash (1)-min.jpg");
+        background-size: cover;
+    }
+
+    #head > div:nth-child(1) > div:nth-child(4) {
+        width: 25%;
+        height: 100%;
+        background: url("assets/images/imagecompressor/annie-spratt-QckxruozjRg-unsplash-min.jpg");
+        background-size: cover;
+    }
+
+    @keyframes slider {
+        0%, 20% {
+            transform: translateX(0);
+        }
+        25%, 45% {
+            transform: translateX(-25%);
+        }
+        50%, 70% {
+            transform: translateX(-50%);
+        }
+        75%, 100% {
+            transform: translateX(-75%);
+        }
+    }
+
+    #textWrapper {
+        width: 100%;
+        height: 100%;
+        /* background-color: #F40064;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #textWrapper > h1 {
+        width: 450px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: #F5F5F5;
+    }
+
+    #textWrapper > h1 > span {
+        color: #F40064;
+    }
+
+    #javaFirst {
+        background: url("assets/images/Pos.png");
+        background-size: cover;
+
+    }
+
+    .image_overlay {
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .image_overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+
+    .image_overlay > h1 {
+        text-align: center;
+        color: #F5F5F5;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .image_overlay > h1 > a {
+        text-decoration: none;
+        color: #5eb9fb;
+    }
+
+    .image_blur {
+        backdrop-filter: blur(10px);
+    }
+
+    .image_overlay:hover > * {
+        transform: translateY(0);
+    }
+
+    .image_overlay:hover {
+        opacity: 1;
+    }
+
+    #javaSec {
+        background: url("assets/images/CarPark.png");
+        background-size: cover;
+    }
+
+    #javaThird {
+        background: url("assets/images/ComputerShop.png");
+        background-size: cover;
+    }
+
+    #javaProjects > div {
+        height: 20vw;
+        width: 20vw;
+        background-color: red;
+        /* display: block; */
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* #resume-download-button{
+         width: 230px;
+         height: 30px;
+         background: transparent;
+         border: 2px solid #F5F5F5;
+         font-family: 'Open Sans', sans-serif;
+         color: #F5F5F5;
+         font-weight: 700;
+     }
+     #resume-download-button:hover{
+
+     }*/
+    .resume-download-button {
+        width: 230px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 6px;
+        font-family: 'Open Sans', sans-serif;
+        color: #F5F5F5;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .resume-download-button:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .resume-download-button:active {
+        color: #000
+    }
+
+    .resume-download-button:active:after {
+        background: transparent;
+    }
+
+    .resume-download-button:hover:before {
+        opacity: 1;
+    }
+
+    .resume-download-button:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 400% 0;
+        }
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+    main > section:nth-child(5) > div:nth-child(2) > div > h1 {
+
+        color: #555;
+        font-family: 'Lato', sans-serif;
+        font-weight: 1000;
+        font-size: 20px;
+
+    }
+
+    .hideOnDefualt{
+        display: none;
+    }
+    /*@media all and (min-width: 0px) and (max-width: 425px) {
+        #head > div:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #textWrapper {
+            width: 100%;
+            height: 100%;
+            !* background-color: #F40064;*!
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            !*
+            background: rgba(0, 0, 0, 0.5);
+            *!
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #textWrapper > h1 {
+            width: 450px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            color: #F5F5F5;
+        }
+
+        #head > div:nth-child(1) > div:nth-child(1) {
+            width: 25%;
+            height: 100%;
+            background: url("assets/images/filler.png");
+            background-size: cover;
+        }
+    }
+*/
+    @media all and (min-width: 0px) and (max-width: 425px) {
+        #head {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100%;
+            margin: auto;
+            overflow-x: hidden;
+        }
+
+        #head > div:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            animation: none;
+        }
+
+        #head > div:nth-child(1) > div:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            background: url("assets/images/filler.png");
+            background-size: cover;
+        }
+
+        #textWrapper {
+            width: 100%;
+            height: 100%;
+            /* background-color: #F40064;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #textWrapper > h1 {
+            width: 100%;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            color: #F5F5F5;
+        }
+
+        #head > div:nth-child(1) > div:nth-child(2) {
+            width: 25%;
+            height: 100%;
+            background: url("assets/images/imagecompressor/keagan-compressed.jpg");
+            background-size: cover;
+            display: none;
+        }
+
+        #head > div:nth-child(1) > div:nth-child(3) {
+            width: 25%;
+            height: 100%;
+            background: url("assets/images/imagecompressor/fotis-fotopoulos-6sAl6aQ4OWI-unsplash (1)-min.jpg");
+            background-size: cover;
+            display: none;
+        }
+
+        #head > div:nth-child(1) > div:nth-child(4) {
+            width: 25%;
+            height: 100%;
+            background: url("assets/images/imagecompressor/annie-spratt-QckxruozjRg-unsplash-min.jpg");
+            background-size: cover;
+            display: none;
+        }
+
+        .container {
+            display: block;
+            grid-template-columns: repeat(2, 0fr);
+            grid-gap: 20px;
+        }
+
+
+        footer > section:nth-child(3) {
+            display: none;
+        }
+
+
+        main > section:nth-child(5) > div:nth-child(2) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 20px;
+            flex-direction: column;
+        }
+
+       /* footer {
+            display: none;
+        }*/
+
+        #sec {
+            display: none;
+        }
+
+        #pDesc {
+            width: 100%;
+            height: 381px;
+        }
+
+        #holder {
+            width: 100vw;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+        }
+
+        main > section:nth-child(2) {
+            /* height: 665px; */
+            height: auto;
+        }
+
+        main > section:nth-child(3) > div {
+            width: 100%;
+            height: 47vw;
+            background: url("assets/images/Screenshot 2022-01-08 12:02:57.png");
+            background-size: cover;
+            alignment: center;
+        }
+
+        #pImg {
+            width: 100vw;
+            height: 66vw;
+            background: url("assets/images/busi.jpg");
+            background-size: cover;
+            border-radius: 8px;
+        }
+
+        main > section:nth-child(3) {
+            height: auto;
+        }
+
+        main > section:nth-child(2) > div > div > p {
+            font-family: Ubuntu;
+            color: #494949;
+            margin-block-start: 1em;
+            margin-inline-start: 10px;
+            margin-inline-end: 10px;
+        }
+
+        main > section:nth-child(2) > div > div > p:nth-child(2) {
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+
+        #javaProjects > div {
+            height: 79vw;
+            width: 79vw;
+            margin-block-end: 18px;
+            background-color: red;
+            /* display: block; */
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #javaProjects {
+            height: auto;
+            width: 100%;
+            /* background-color: yellow; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        main > section:nth-child(5) {
+            width: 100%;
+            height: auto;
+        }
+
+        main > section:nth-child(4) > div > nav > ul {
+            list-style: none;
+            width: 100vw;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            height: auto;
+            align-items: center;
+            padding: 0;
+        }
+
+        main > section:nth-child(4) > div > nav > ul > li {
+            font-family: Ubuntu;
+            color: #635C73;
+            /* padding: 30px; */
+            font-size: 3vw;
+            height: 28px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        main > section:nth-child(4) {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #F5F5F5;
+            width: 100%;
+        }
+
+        main > section:nth-child(6) > div:nth-child(1) {
+            width: 100vw;
+            max-width: 100%;
+            position: relative;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #percentageHolder {
+            /*width: 100%;
+            height: 20px;
+            !* background-color: #F40064; *!
+            display: flex;
+            justify-content: space-around;
+            align-items: center;*/
+            display: none;
+        }
+
+        main > section:nth-child(5) > div:nth-child(2) > div {
+           height: auto;
+        }
+
+        main > section:nth-child(6) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 20px;
+            flex-direction: column;
+        }
+
+        .img1 {
+            height: 200px;
+            background: url("assets/images/360Hotel.jpg");
+            background-size: cover;
+            grid-row: 1/3;
+            width: 100%;
+            border-radius: 8px;
+            margin-block-end: 12px;
+        }
+
+        footer > section:nth-child(1) > div:nth-child(1) {
+            display: none;
+        }
+
+        footer > section:nth-child(2) {
+            display: none;
+        }
+
+        footer > section:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+            display: none;
+        }
+
+        .hideOnDefualt{
+            display: unset;
+            text-align: center;
+        }
+
+        a {
+            background-color: transparent;
+            margin-inline-end: 18px;
+        }
+
+        .img2 {
+           margin-block-end: 12px;
+        }
+    }
+
 </style>
+
 <body>
-<header id="head">
-    <img alt="" src="assets/images/filler.png">
+<header>
+
+    <div>
+        <div id="textWrapper">
+            <h1>Hello, I'm <span>Sithum Dilshan</span> and I'm a Programmer
+
+            </h1>
+            <button class="resume-download-button">Download Resume</button>
+        </div>
+        <div id="head">
+            <div>
+                <div>
+
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+
+            </div>
+        </div>
+
+        <!--<img alt="" src="assets/images/filler.png">-->
+    </div>
 </header>
 
 <main>
-
     <section id="sec">
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Contact us</li>
-                <li>About us</li>
+                <li class="menu">Home</li>
+                <li class="menu">Contact us</li>
+                <li class="menu">About us</li>
             </ul>
         </nav>
         <!--<nav id="nav">
@@ -115,68 +1356,327 @@
             </ul>
         </nav>-->
     </section>
-
     <section>
-
         <!--short description about me-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolore dolorum est laudantium, magni nam, natus nobis, officiis quam quo recusandae tenetur ullam? Assumenda dicta esse non nostrum, praesentium qui?</p>
-
+        <h1>About me</h1>
+        <div id="holder">
+            <div id="pDesc">
+                <p>I am Sithum and currently learning programming. I have a big dream to become Software Engineer and
+                    working hard to achieve my goal. Also I like to work as a freelancer and build my own company in the
+                    future. I start my journey with IJSE on 2021. And my journey has far more to go</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugit laboriosam, laudantium
+                    maxime natus perferendis recusandae repellendus. Accusamus aspernatur autem consectetur consequatur,
+                    earum eligendi, exercitationem minus numquam, ratione velit voluptate?</p>
+            </div>
+            <div id="pImg"></div>
+        </div>
     </section>
     <section>
+        <h1>Education..</h1>
+        <div>
+
+        </div>
+        <!--<img src="assets/images/Screenshot 2022-01-08 12:02:57.png" alt="">-->
         <!--educational background-->
     </section>
     <section>
         <!--projects i've done-->
+        <h1>Projects I've Done</h1>
+        <div>
+            <nav>
+                <ul>
+                    <li class="pMenu">JAVA</li>
+                    <li class="pMenu">HTML</li>
+                    <li class="pMenu">JAVA SCRIPT</li>
+                    <li class="pMenu"><a href="CSS/Assignment-01/index.html">View all</a></li>
+                </ul>
+            </nav>
+
+            <!-- <div></div>
+             <div></div>-->
+        </div>
+        <div id="javaProjects">
+            <div id="javaFirst">
+                <div class="image_blur image_overlay">
+                    <h1>Design this POS system as a first database connected project on JAVA.<br>View source on <br><br><a
+                            href="https://github.com/Sithum-DIlshan/Super-Market-Project/tree/main/SuperMarket">github</a>
+                    </h1>
+                </div>
+            </div>
+            <div id="javaSec">
+                <div class="image_blur image_overlay">
+                    <h1>I design this project as my first, in memory javafx project <br>View source on <br><br><a
+                            href="https://github.com/Sithum-DIlshan/Vehicle-Parking-System/tree/master/Vehicle%20Parking%20System">github</a>
+                    </h1>
+                </div>
+            </div>
+            <div id="javaThird">
+                <div class="image_blur image_overlay">
+                    <h1>Design this as my final project of semester one. Designed for computer shop<br>View source on
+                        <br><br><a href="https://github.com/Sithum-DIlshan/Computer-shop/tree/main/Computer%20Shop">github</a>
+                    </h1>
+                </div>
+            </div>
+            <div id="javaFourth"></div>
+        </div>
+
     </section>
     <section>
         <!--skill set-->
+        <div>
+            <h1>Skills</h1>
+        </div>
+        <!-- <div>
+         </div>
+        -->
+        <div>
+            <div>
+                <div id="java">
+                    <svg height="160px" version="1.1" width="160px" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#e91e63"/>
+                                <stop offset="100%" stop-color="#673ab7"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50%" cy="50%" id="javaCircle" r="70" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 id="javaPercentage"></h1>
+            </div>
+            <div>
+                <div id="html">
+
+                    <svg height="160px" version="1.1" width="160px" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#e91e63"/>
+                                <stop offset="100%" stop-color="#673ab7"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50%" cy="50%" id="htmlCircle" r="70" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 id="htmlPercentage"></h1>
+            </div>
+            <div>
+                <div id="css">
+                    <svg height="160px" version="1.1" width="160px" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#e91e63"/>
+                                <stop offset="100%" stop-color="#673ab7"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50%" cy="50%" id="cssCircle" r="70" stroke-linecap="round"/>
+                    </svg>
+
+                </div>
+                <h1 id="cssPercentage"></h1>
+
+            </div>
+            <div>
+                <div id="javaScript">
+                    <svg height="160px" version="1.1" width="160px" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#e91e63"/>
+                                <stop offset="100%" stop-color="#673ab7"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50%" cy="50%" id="jsCircle" r="70" stroke-linecap="round"/>
+                    </svg>
+
+                </div>
+                <h1 id="jsPercentage"></h1>
+            </div>
+            <div>
+                <div id="mysql">
+                        <svg height="160px" version="1.1" width="160px" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="GradientColor">
+                                    <stop offset="0%" stop-color="#e91e63"/>
+                                    <stop offset="100%" stop-color="#673ab7"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50%" cy="50%" id="mySqlCircle" r="70" stroke-linecap="round"/>
+                        </svg>
+
+                </div>
+                <h1  id="sqlPercentage"></h1>
+            </div>
+        </div>
+            <script>
+                let number = document.getElementById("javaPercentage");
+                let counter = 0;
+                setInterval(() => {
+                    if (counter == 80) {
+                        clearInterval();
+                    } else {
+                        counter += 1;
+                        number.innerHTML = counter + "%";
+                    }
+                }, 38)
+
+                let number2 = document.getElementById("htmlPercentage");
+                let counter2 = 0;
+                setInterval(() => {
+                    if (counter2 == 60) {
+                        clearInterval();
+                    } else {
+                        counter2 += 1;
+                        number2.innerHTML = counter2 + "%";
+                    }
+                }, 49)
+
+                let number3 = document.getElementById("cssPercentage");
+                let counter3 = 0;
+                setInterval(() => {
+                    if (counter3 == 40) {
+                        clearInterval();
+                    } else {
+                        counter3 += 1;
+                        number3.innerHTML = counter3 + "%";
+                    }
+                }, 80)
+
+                let number4 = document.getElementById("jsPercentage");
+                let counter4 = 0;
+                setInterval(() => {
+                    if (counter4 == 5) {
+                        clearInterval();
+                    } else {
+                        counter4 += 1;
+                        number4.innerHTML = counter4 + "%";
+                    }
+                }, 550)
+
+
+                let number5 = document.getElementById("sqlPercentage");
+                let counter5 = 0;
+                setInterval(() => {
+                    if (counter5 == 70) {
+                        clearInterval();
+                    } else {
+                        counter5 += 1;
+                        number5.innerHTML = counter5 + "%";
+                    }
+                }, 45)
+            </script>
     </section>
     <section>
-        <!--images with description-->
+        <!--Gallery-->
+        <div>
+            <h1>Photos I Captured</h1>
+        </div>
+        <div class="container">
+            <div class="img1">
+                <div class="image_blur image_overlay">
+                    <h1>360 Hotel matara near the polhena beach</h1>
+                </div>
+            </div>
+            <div class="img2">
+                <div class="image_blur image_overlay">
+                    <h1>Sigiriya is an ancient rock fortress and palace built by King Kashyapa <br>during the reign of
+                        473 - 495 which is standing majestically 660 feet straight up.
+                        <br>It is located in the northern Matale district <br>near the town of Dambulla <br>in central
+                        province of Sri Lanka.</h1>
+                </div>
+
+            </div>
+            <div class="img3">
+                <div class="image_blur image_overlay">
+                    <h1><a href="">See more</a></h1>
+                </div>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
+    <section>
+        <div>
+            <div><img alt="" src="assets/images/icons8-java-150.png"></div>
+            <div>
+                <img alt="" src="assets/images/SD.png">
+            </div>
+            <div>
+                <img alt="" src="assets/images/icons8-mysql-logo-150.png">
+            </div>
+        </div>
+        <div>
+            <div>
+                <i class="fas fa-map-marked-alt" style="color: #F5F5F5"></i>
+                <h1>LOCATION</h1>
+                <h1>
 
+                    Matara gedara, wawwa, devinuwara</h1>
+            </div>
+            <div>
+                <form id="emailField">
+                    <input id="emailTxt" name="fname" type="text">
+                </form>
+                <button id="btnSubmit">SUBSCRIBE</button>
+            </div>
+
+        </div>
+        <div style="color: #F5F5F5; font-size: 1.4vw; font-family: 'Montserrat', sans-serif;text-align: center; margin-block-end: 19px;";  class="hideOnDefualt">
+            <h1>CONTACT</h1>
+            <h1><i class="fas fa-envelope" style="padding-right: 6px"></i>sithumdilshan985@gmail.com</h1>
+            <h1><i class="fas fa-phone-alt" style="padding-right: 6px"></i>+94774047790</h1>
+        </div>
+        <div class="hideOnDefualt">
+            <div>
+                <h1 style="color: #F5F5F5; font-family: 'Montserrat', sans-serif; font-size: 2vw">
+                    ON SOCIAL MEDIA
+                </h1>
+            </div>
+
+            <div >
+                <a href="https://www.facebook.com/sithum.dilshan.142/"><i class="fab fa-facebook-square" style="color: #F5F5F5"></i></a>
+                <a href="https://twitter.com/SithumDilshan3"><i class="fab fa-twitter-square" style="color: #F5F5F5"></i> </a>
+                <a href="https://github.com/Sithum-DIlshan"><i class="fab fa-github" style="color: #F5F5F5"></i> </a>
+                <a href="https://www.linkedin.com/in/sithum-dilshan-1691641b3/"> <i class="fab fa-linkedin" style="color: #F5F5F5"></i></a>
+                <a href="https://www.instagram.com/sithum_dilshan_/"> <i class="fab fa-instagram" style="color: #F5F5F5"></i></a>
+                <a href="https://wa.me/0774047790"> <i class="fab fa-whatsapp" style="color: #F5F5F5"></i></a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1></h1>
+        <nav>
+            <ul id="footerList">
+                <li class="footermenu">HOME</li>
+                <li class="footermenu">ABOUT US</li>
+                <li class="footermenu">CONTACT</li>
+                <li class="footermenu">GALLERY</li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <div>
+            <h1>CONTACT</h1>
+            <h1><i class="fas fa-envelope" style="padding-right: 6px"></i>sithumdilshan985@gmail.com</h1>
+            <h1><i class="fas fa-phone-alt" style="padding-right: 6px"></i>+94774047790</h1>
+        </div>
+        <div>
+            <div>
+                <h1>
+                    ON SOCIAL MEDIA
+                </h1>
+            </div>
+
+            <div>
+                <a href="https://www.facebook.com/sithum.dilshan.142/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/SithumDilshan3"><i class="fab fa-twitter-square"></i> </a>
+                <a href="https://github.com/Sithum-DIlshan"><i class="fab fa-github"></i> </a>
+                <a href="https://www.linkedin.com/in/sithum-dilshan-1691641b3/"> <i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sithum_dilshan_/"> <i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/0774047790"> <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
 </footer>
 
 </body>
