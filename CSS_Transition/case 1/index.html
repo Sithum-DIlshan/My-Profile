@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://kit.fontawesome.com/a439b50eb0.js" crossorigin="anonymous"></script>
 </head>
 <style>
     /*body > section {
@@ -24,17 +25,34 @@
         list-style: none;
         width: 320px;
         height: 50px;
-        background-color: blueviolet;
         margin-top: 63px;
         transition-property: width;
         transition-duration: 3s;
         position: relative;
         right: 268px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 10px 10px 10px 10px;
+    }
 
+    body > section > nav > ul > li:nth-child(1) {
+        background-color: #de3232;
+    }
+
+    body > section > nav > ul > li:nth-child(2) {
+        background-color: #eac730;
+    }
+
+    body > section > nav > ul > li:nth-child(3) {
+        background-color: #01b76b;
+    }
+
+    body > section > nav > ul > li:nth-child(4) {
+        background-color: #3240de;
     }
 
     .wrapper {
-        position: absolute;
         position: absolute;
         left: 0;
         margin: auto;
@@ -52,12 +70,12 @@
         width: 10px;
     }
 
-    .img {
-        /* width: 20px;
-         height: 20px;
-         color: white;*/
-        position: absolute;
-        right: 0;
+
+
+    .menu {
+        font-family: Ubuntu;
+        color: white;
+        font-size: 16px;
     }
 </style>
 <body>
@@ -65,19 +83,22 @@
     <nav>
         <ul class="wrapper">
             <li class="list">
-                <img class="img" src="icons8-contacts-50%20(1).png"/>
-                <label> Menu One</label>
+                <i class="fas fa-home" style="color: white"></i>
+                <h1 class="menu">Menu One</h1>
             </li>
             <li class="list">
-                <label> Menu Two</label>
+                <i class="fas fa-id-card-alt" style="color: white"></i>
+                <h1 class="menu">Menu Two</h1>
 
             </li>
             <li class="list">
-                <label> Menu Three</label>
+                <i class="fas fa-globe-americas" style="color: white"></i>
+                <h1 class="menu">Menu Three</h1>
 
             </li>
             <li class="list">
-                <label> Menu Four</label>
+                <i class="fas fa-phone-alt" style="color: white"></i>
+                <h1 class="menu">Menu Four</h1>
 
             </li>
         </ul>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{a439b50eb0}" />
+    <file url="file://$PROJECT_DIR$/CSS" libraries="{a439b50eb0}" />
+    <file url="file://$PROJECT_DIR$/CSS_Animation" libraries="{a439b50eb0}" />
+    <file url="file://$PROJECT_DIR$/CSS_Transition" libraries="{a439b50eb0}" />
+  </component>
+</project>

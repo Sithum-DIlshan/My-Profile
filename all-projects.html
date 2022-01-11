@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+</head>
+<style>
+
+    body {
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+        background: linear-gradient(45deg, #0d45b4, #45dabe);
+    }
+
+    body > a > div:hover {
+        transform: scale(1.02);
+        transition-property: transform;
+        transition-duration: 0.25s;
+    }
+
+    body > div {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        background-color: red;
+    }
+
+    body > a > div {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+    }
+
+    body > h1 {
+        width: 100vw;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: #F5F5F5;
+        font-weight: 600;
+    }
+
+    /* body > div:nth-child(1) {
+         background: url("assets/images/all-projects/1.png");
+         background-size: cover;
+
+     }*/
+    body > a:nth-child(2) > div /**/
+    {
+        background: url("assets/images/all-projects/1.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    body > a:nth-child(3) > div {
+        background: url("assets/images/all-projects/2.png");
+        background-size: cover;
+
+    }
+
+    body > a:nth-child(4) > div {
+        background: url("assets/images/all-projects/3.png");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    body > a:nth-child(5) > div {
+        background: url("assets/images/all-projects/4.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    body > a:nth-child(6) > div {
+        background: url("assets/images/all-projects/5.png");
+        background-size: cover;
+    }
+
+    body > a:nth-child(7) > div {
+        background: url("assets/images/all-projects/6.png");
+        background-size: cover;
+    }
+
+    body > a:nth-child(8) > div {
+        background: url("assets/images/all-projects/7.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    body > a:nth-child(9) > div {
+        background: url("assets/images/all-projects/8.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    body > a:nth-child(10) > div {
+        background: url("assets/images/all-projects/9.png");
+        background-size: cover;
+    }
+
+    body > a:nth-child(11) > div {
+        background: url("assets/images/all-projects/10.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+
+
+    #javaFirst {
+        background: url("assets/images/Pos.png");
+        background-size: cover;
+
+    }
+    #javaSec {
+        background: url("assets/images/CarPark.png");
+        background-size: cover;
+    }
+
+    #javaThird {
+        background: url("assets/images/ComputerShop.png");
+        background-size: cover;
+    }
+
+    #javaFourth{
+        background: url("assets/images/orm2.png");
+        background-size: cover;
+    }
+    .image_overlay {
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .image_overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+
+    .image_overlay > h1 {
+        text-align: center;
+        color: #F5F5F5;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .image_overlay > h1 > a {
+        text-decoration: none;
+        color: #5eb9fb;
+    }
+
+    .image_blur {
+        backdrop-filter: blur(10px);
+    }
+
+    .image_overlay:hover > * {
+        transform: translateY(0);
+    }
+
+    .image_overlay:hover {
+        opacity: 1;
+    }
+
+</style>
+<body>
+<h1>All Projects I have done</h1>
+
+<a href="CSS/Assignment-01/index.html">
+    <div></div>
+</a>
+<a href="CSS/Assignment-02/index.html">
+    <div></div>
+</a>
+<a href="CSS/Assignment-03/index.html">
+    <div></div>
+</a>
+<a href="CSS/Assignment-04/index.html">
+    <div></div>
+</a>
+<a href="CSS_Animation/case%201/index.html">
+    <div></div>
+</a>
+<a href="CSS_Animation/case%202/index.html">
+    <div></div>
+</a>
+<a href="CSS_Animation/case%203/index.html">
+    <div></div>
+</a>
+<a href="CSS_Animation/case%204/index.html">
+    <div></div>
+</a>
+<a href="CSS_Transition/case%201/index.html">
+    <div></div>
+</a>
+<a href="CSS_Transition/case%202/index.html">
+    <div></div>
+</a>
+<div id="javaFirst">
+    <div class="image_blur image_overlay">
+        <h1>Design this POS system as a first database connected project on JAVA.<br>View source on <br><br><a
+                href="https://github.com/Sithum-DIlshan/Super-Market-Project/tree/main/SuperMarket">github</a>
+        </h1>
+    </div>
+</div>
+<div id="javaSec">
+    <div class="image_blur image_overlay">
+        <h1>I design this project as my first, in memory javafx project <br>View source on <br><br><a
+                href="https://github.com/Sithum-DIlshan/Vehicle-Parking-System/tree/master/Vehicle%20Parking%20System">github</a>
+        </h1>
+    </div>
+</div>
+<div id="javaThird">
+    <div class="image_blur image_overlay">
+        <h1>Design this as my final project of semester one. Designed for computer shop<br>View source on
+            <br><br><a href="https://github.com/Sithum-DIlshan/Computer-shop/tree/main/Computer%20Shop">github</a>
+        </h1>
+    </div>
+</div>
+<div id="javaFourth">
+    <div class="image_blur image_overlay">
+        <h1>Design this as my first project that used Hibernate<br>View source on
+            <br><br><a href="https://github.com/Sithum-DIlshan/Hbernate">github</a>
+        </h1>
+    </div>
+</div>
+</body>
+</html>
