@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>All Projects</title>
     <link href="assets/css/normalize.css" rel="stylesheet">
+    <base rel="noopener noreferrer" target="_blank">
+    <link href="assets/icons/favIcon.png" rel="icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
 </head>
 <style>
-
     body {
         width: 100vw;
         max-width: 100%;
@@ -16,7 +19,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 20px 20px;
-        background: linear-gradient(45deg, #0d45b4, #45dabe);
+        background: linear-gradient(180deg, #0d45b4, #45dabe);
     }
 
     body > a > div:hover {
@@ -110,10 +113,6 @@
         background-position: center;
     }
 
-
-
-
-
     #javaFirst {
         background: url("assets/images/Pos.png");
         background-size: cover;
@@ -173,6 +172,36 @@
 
     .image_overlay:hover {
         opacity: 1;
+    }
+
+    .bg-area {
+        position: fixed;
+        left: -50%;
+        right: -50%;
+        top: 0;
+        bottom: 0;
+        animation: animate 5s ease-in-out infinite alternate;
+        background: linear-gradient(90deg, #F40064 50%, #0d45b4 -50%);
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    .layer2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 3s;
+    }
+
+    .layer3 {
+        animation-duration: 5s;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(50%);
+        }
     }
 
 </style>
@@ -237,5 +266,10 @@
         </h1>
     </div>
 </div>
+<main>
+<div class="bg-area"></div>
+<div class="bg-area layer2"></div>
+<div class="bg-area layer3"></div>
+</main>
 </body>
 </html>
