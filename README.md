@@ -17,3 +17,15 @@
 ![this is image](https://github.com/Sithum-DIlshan/My-Profile/blob/master/images-for-readme/Screenshot%20from%202022-01-11%2015-58-09.png)
 ![this is image](https://github.com/Sithum-DIlshan/My-Profile/blob/master/images-for-readme/Screenshot%20from%202022-01-11%2015-59-16.png)
 ![this is image](https://github.com/Sithum-DIlshan/My-Profile/blob/master/images-for-readme/Screenshot%20from%202022-01-11%2015-59-19.png)
+
+
+## Using Tools
+- Design Tool - Figma
+- IDE - JetBrains WebStrom 2021.3.1/InteliJ Idea 2021.2.4
+
+## Workstation
+- HP Note book
+- OS - Ubuntu 20.0.4
+- Disk Space - 128 SSD(Solid state disk)
+- RAM - 8GB
+- Processor - intel 7th Gen i3-1165G7 @ 2.40GHz
