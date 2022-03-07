@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Que</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    div {
+        border-radius: 7px;
+    }
+
+    body > div {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        background-color: #344650;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body > div > div {
+        width: 800px;
+        height: 300px;
+        /* border-top: 5px solid #84bbda;
+         border-bottom: 5px solid #84bbda;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    body > div > div > div:nth-child(1) {
+        width: 800px;
+        height: 55px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+    }
+
+    body > div > div > div:nth-child(2) {
+        width: 800px;
+        height: 100px;
+        border-top: 5px solid #879095;
+        border-bottom: 5px solid #879095;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    body > div > div > div:nth-child(3) {
+        width: 800px;
+        height: 55px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    body > div > div > div:nth-child(1) > div {
+        width: 100px;
+        height: 50px;
+        background-color: #ff0000;
+    }
+
+    body > div > div > div:nth-child(3) > div {
+        width: 100px;
+        height: 50px;
+        background-color: #ff2dee;
+        position: relative;
+        right: -700px;
+    }
+
+    body > div > div > div:nth-child(2) > div {
+        width: 600px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(1) {
+        width: 100px;
+        height: 50px;
+        background-color: #00920a;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(2) {
+        width: 100px;
+        height: 50px;
+        background-color: #5e00ff;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(3) {
+        width: 100px;
+        height: 50px;
+        background-color: #f2ff00;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(4) {
+        width: 100px;
+        height: 50px;
+        background-color: #ffb4cb;
+    }
+</style>
+<body>
+<div>
+    <div>
+        <div>
+            <div id="div1"></div>
+        </div>
+        <div>
+            <div>
+                <div id="div2"></div>
+                <div id="div3"></div>
+                <div id="div4"></div>
+                <div id="div5"></div>
+            </div>
+        </div>
+        <div>
+            <div id="div6"></div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+    var divArray = [$("#div1"), $("#div2"), $("#div3"), $("#div4"), $("#div5"), $("#div6")];
+    var colors = ["#ff0000", "#00920a", "#5e00ff", "#f2ff00", "#ffb4cb", "#ff2dee"];
+
+    /*divArray[0].css("background-color", colors[]);*/
+    setInterval(que, 2000);
+    setInterval(changeArray, 2000);
+
+    function que() {
+        for (let i = 0; i < divArray.length; i++) {
+               if (i == 5){
+                    divArray[0].css("background-color", colors[i]);
+                }else {
+                    divArray[i+1].css("background-color", colors[i]);
+
+                }
+          /*  let string = colors[i+1];
+            colors[i+1] = colors[i];   */
+        }
+    }
+
+    function changeArray() {
+        let string = colors[1];
+        colors[1] = colors[0];
+        let string1 = colors[2];
+        colors[2] = string;
+        let string2 = colors[3];
+        colors[3] = string1;
+        let string3 = colors[4];
+        colors[4] = string2;
+        let string4 = colors[5];
+        colors[5] = string3;
+        colors[0] = string4;
+    }
+
+
+</script>
+</body>
+</html>

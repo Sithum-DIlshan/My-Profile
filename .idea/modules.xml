@@ -5,9 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/CSS/CSS.iml" filepath="$PROJECT_DIR$/CSS/CSS.iml" />
       <module fileurl="file://$PROJECT_DIR$/CSS_Animation/CSS_Animation.iml" filepath="$PROJECT_DIR$/CSS_Animation/CSS_Animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/CSS_Transition/CSS_Transition.iml" filepath="$PROJECT_DIR$/CSS_Transition/CSS_Transition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JS/JS.iml" filepath="$PROJECT_DIR$/JS/JS.iml" />
       <module fileurl="file://$PROJECT_DIR$/My Projects/My Projects.iml" filepath="$PROJECT_DIR$/My Projects/My Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyProfile.iml" filepath="$PROJECT_DIR$/.idea/MyProfile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SPA/SPA.iml" filepath="$PROJECT_DIR$/SPA/SPA.iml" />
     </modules>
   </component>
 </project>

@@ -1,16 +1,18 @@
-function saveCustomer() {
-    //gather customer information
-    let customerID = $("#cus-id").val();
-    let customerName = $("#cus-name").val();
-    let customerAddress = $("#cus-address").val();
-    let customerSalary = $("#cus-salary").val();
+const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
+
+function saveCustomer(customerObj) {
+    //gather customer information
     //create object
-    var customerObj = {
+    /*var customerObj = {
         id: customerID, name: customerName, address: customerAddress, salary: customerSalary
-    };
+    };*/
     customerDB.push(customerObj);
     loadAllCutsomers();
+    loadAllCustomerIds();
 }
 
 function loadAllCutsomers() {
@@ -23,11 +25,6 @@ function loadAllCutsomers() {
     }
 }
 
-$('#cus-id,#cus-name,#cus-address,#cus-salary').on('keydown', function (eventOb) {
-    if (eventOb.key == "Tab") {
-        eventOb.preventDefault(); // stop execution of the button
-    }
-});
 
 $('#cus-id,#cus-name,#cus-address,#cus-salary').on('blur', function () {
     cusformValid();
@@ -149,9 +146,73 @@ function clearAll() {
     $("#cus-address").val('');
     $("#cus-salary").val('');
     $("#cus-id").focus();
-    $("#cus-id, #cus-name, #cus-address, #cus-salary").css('border','2px solid #ced4da')
-    $("#saveCustomer").attr('disabled',true);
+    $("#cus-id, #cus-name, #cus-address, #cus-salary").css('border', '2px solid #ced4da')
+    $("#saveCustomer").attr('disabled', true);
     loadAllCutsomers();
     $("#lblcusid, #lblcusname, #lblcusaddress, #lblcussalary").val("");
 
+}
+
+function checkCustomerExists(id) {
+    /* if (customerDB.includes(id)) {
+         $("#cus-id").css('border', '2px solid red');
+         $("#lblcusid").text("Cus ID Already Exists Try Another One");
+         let res = confirm("Try Again");
+         if (res){
+             $("#cus-id").val('');
+         }
+     }*/
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == id) {
+            /*$("#cus-id").css('border', '2px solid red');
+            $("#lblcusid").text("Cus ID Already Exists Try Another One");
+            let res = confirm("Try Again");
+            if (res){
+                $("#cus-id").val('');
+            }*/
+            $("#saveCustomer").attr('disabled', true);
+            return true;
+        }
+    }
+    return false;
+}
+
+function clearCustomers() {
+    while(customerDB.length>0){
+        customerDB.pop();
+    }
+    loadAllCutsomers();
+}
+
+function loadIDs(){
+    for (let i = 0; i < customerDB.length; i++) {
+        id = customerDB[i].id;
+        $("#selectCusID").append($('<option></option>').attr('value', "key").text(id));
+    }
+}
+
+function loadAllCustomerIds() {
+    if ($("#selectCusID").has('option').length == 0) {
+        loadIDs();
+    } else {
+        $("#selectCusID").empty();
+        /*<option disabled hidden selected*/
+        $("#selectCusID").append($('<option disabled hidden selected></option>').attr('value', "key").text("Select-Customer"));
+        loadIDs();
+    }
+}
+
+function searchCustomer(id) {
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == id) {
+            /*$("#cus-id").css('border', '2px solid red');
+            $("#lblcusid").text("Cus ID Already Exists Try Another One");
+            let res = confirm("Try Again");
+            if (res){
+                $("#cus-id").val('');
+            }*/
+            return new Customer(customerDB[i].id,customerDB[i].name,customerDB[i].address,customerDB[i].salary);
+        }
+    }
+    return null;
 }
