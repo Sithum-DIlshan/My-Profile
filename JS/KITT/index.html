@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KITT</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    div {
+        border-radius: 7px;
+    }
+
+    body > div {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        background-color: #344650;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body > div > div {
+        width: 800px;
+        height: 300px;
+        /* border-top: 5px solid #84bbda;
+         border-bottom: 5px solid #84bbda;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    body > div > div > div:nth-child(1) {
+        width: 800px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    body > div > div > div:nth-child(1) > p {
+        font-family: Ubuntu;
+        color: #e92442;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    body > div > div > div:nth-child(2) {
+        width: 800px;
+        height: 100px;
+        border-top: 5px solid #879095;
+        border-bottom: 5px solid #879095;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    body > div > div > div:nth-child(1) > div {
+        width: 100px;
+        height: 50px;
+        background-color: #ff0000;
+    }
+
+
+    body > div > div > div:nth-child(2) > div {
+        width: 800px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(1) {
+        width: 100px;
+        height: 50px;
+        background-color: #ff0000;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(2) {
+        width: 100px;
+        height: 50px;
+        background-color: #bd0000;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(3) {
+        width: 100px;
+        height: 50px;
+        background-color: #a7312e;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(4) {
+        width: 100px;
+        height: 50px;
+        background-color: #c25f5b;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(5) {
+        width: 100px;
+        height: 50px;
+        background-color: #c25f5b;
+
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(6) {
+        width: 100px;
+        height: 50px;
+        background-color: #a7312e;
+    }
+
+    body > div > div > div:nth-child(2) > div > div:nth-child(7) {
+        width: 100px;
+        height: 50px;
+        background-color: #bd0000;
+    }
+</style>
+<body>
+<div>
+    <div>
+        <div>
+            <p>JavaScript Knight Rider</p>
+        </div>
+        <div>
+            <div>
+                <div id="div2"></div>
+                <div id="div3"></div>
+                <div id="div4"></div>
+                <div id="div5"></div>
+                <div id="div6"></div>
+                <div id="div7"></div>
+                <div id="div8"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+<script>
+
+
+    var divArray = [$("#div2"), $("#div3"), $("#div4"), $("#div5"), $("#div6"), $("#div7"), $("#div8")];
+    let check = divArray[0].css('background-color');
+
+    let interval1 = setInterval(animateColors,150);
+    let interval2 = 0;
+    function animateColors() {
+        let colour1 = divArray[0].css('background-color');
+        let colour2 = divArray[1].css('background-color');
+        let colour3 = divArray[2].css('background-color');
+        let colour4 = divArray[3].css('background-color');
+        let colour5 = divArray[4].css('background-color');
+        let colour6 = divArray[5].css('background-color');
+        let colour7 = divArray[6].css('background-color');
+
+        /*divArray[0].css('background-color',colour2);
+        divArray[1].css('background-color',colour3);
+        divArray[2].css('background-color',colour4);
+        divArray[3].css('background-color',colour5);
+        divArray[4].css('background-color',colour6);
+        divArray[5].css('background-color',colour7);
+        divArray[6].css('background-color',colour1);*/
+        divArray[1].css('background-color',colour1);
+        divArray[2].css('background-color',colour2);
+        divArray[3].css('background-color',colour3);
+        divArray[4].css('background-color',colour4);
+        divArray[5].css('background-color',colour5);
+        divArray[6].css('background-color',colour6);
+        divArray[0].css('background-color',colour7);
+
+        if (divArray[6].css('background-color') == check){
+            clearInterval(interval1);
+            interval2 = setInterval(reverse, 150);
+
+
+
+        }
+        /*if ()*/
+    }
+
+    function reverse() {
+       /* let interval2 = setInterval(reverse, 200);*/
+        let colour1 = divArray[0].css('background-color');
+        let colour2 = divArray[1].css('background-color');
+        let colour3 = divArray[2].css('background-color');
+        let colour4 = divArray[3].css('background-color');
+        let colour5 = divArray[4].css('background-color');
+        let colour6 = divArray[5].css('background-color');
+        let colour7 = divArray[6].css('background-color');
+
+
+        divArray[5].css('background-color',colour7);
+        divArray[4].css('background-color',colour6);
+        divArray[3].css('background-color',colour5);
+        divArray[2].css('background-color',colour4);
+        divArray[1].css('background-color',colour3);
+        divArray[0].css('background-color',colour2);
+        divArray[6].css('background-color',colour1);
+
+        if (colour2 == check){
+            /*clearInterval(interval2);*/
+            /*clearInterval(interval2);
+            localStorage.clear();*/
+            clearInterval(interval2);
+            interval1 = setInterval(animateColors, 150);
+        }
+    }
+
+
+</script>
+</body>
+</html>
