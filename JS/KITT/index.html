@@ -19,6 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     body > div > div {
@@ -32,6 +33,19 @@
         justify-content: space-evenly;
 
     }
+
+    body > div > div:nth-child(2) {
+        width: 800px;
+        height: 100px;
+        /* border-top: 5px solid #84bbda;
+         border-bottom: 5px solid #84bbda;*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+    }
+
 
     body > div > div > div:nth-child(1) {
         width: 800px;
@@ -86,41 +100,42 @@
     body > div > div > div:nth-child(2) > div > div:nth-child(2) {
         width: 100px;
         height: 50px;
-        background-color: #bd0000;
+        background-color: #c25f5b;
     }
 
     body > div > div > div:nth-child(2) > div > div:nth-child(3) {
         width: 100px;
         height: 50px;
-        background-color: #a7312e;
+        background-color: #f3d4d4;
     }
 
     body > div > div > div:nth-child(2) > div > div:nth-child(4) {
         width: 100px;
         height: 50px;
-        background-color: #c25f5b;
+        background-color: white;
     }
 
     body > div > div > div:nth-child(2) > div > div:nth-child(5) {
         width: 100px;
         height: 50px;
-        background-color: #c25f5b;
-
+        background-color: white;
     }
 
     body > div > div > div:nth-child(2) > div > div:nth-child(6) {
         width: 100px;
         height: 50px;
-        background-color: #a7312e;
+        background-color: #f3d4d4;
     }
 
     body > div > div > div:nth-child(2) > div > div:nth-child(7) {
         width: 100px;
         height: 50px;
-        background-color: #bd0000;
+        background-color: #c25f5b;
     }
+
 </style>
 <body>
+<embed src="assets/Knight%20Rider%20-%20Original%20Show%20Intro%20_%20NBC%20Classics.mp3" loop="true" autostart="true" width="2" height="0">
 <div>
     <div>
         <div>
@@ -139,6 +154,13 @@
         </div>
 
     </div>
+
+    <div>
+        <button type="button" class="btn btn-success m-2" id="btnPlay">Play</button>
+        <button type="button" class="btn btn-warning" id="btnPause">Pause</button>
+    </div>
+
+
 </div>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -149,8 +171,9 @@
     var divArray = [$("#div2"), $("#div3"), $("#div4"), $("#div5"), $("#div6"), $("#div7"), $("#div8")];
     let check = divArray[0].css('background-color');
 
-    let interval1 = setInterval(animateColors,150);
+    let interval1 = setInterval(animateColors, 150);
     let interval2 = 0;
+
     function animateColors() {
         let colour1 = divArray[0].css('background-color');
         let colour2 = divArray[1].css('background-color');
@@ -167,18 +190,17 @@
         divArray[4].css('background-color',colour6);
         divArray[5].css('background-color',colour7);
         divArray[6].css('background-color',colour1);*/
-        divArray[1].css('background-color',colour1);
-        divArray[2].css('background-color',colour2);
-        divArray[3].css('background-color',colour3);
-        divArray[4].css('background-color',colour4);
-        divArray[5].css('background-color',colour5);
-        divArray[6].css('background-color',colour6);
-        divArray[0].css('background-color',colour7);
+        divArray[1].css('background-color', colour1);
+        divArray[2].css('background-color', colour2);
+        divArray[3].css('background-color', colour3);
+        divArray[4].css('background-color', colour4);
+        divArray[5].css('background-color', colour5);
+        divArray[6].css('background-color', colour6);
+        divArray[0].css('background-color', colour7);
 
-        if (divArray[6].css('background-color') == check){
+        if (divArray[6].css('background-color') == check) {
             clearInterval(interval1);
             interval2 = setInterval(reverse, 150);
-
 
 
         }
@@ -186,7 +208,7 @@
     }
 
     function reverse() {
-       /* let interval2 = setInterval(reverse, 200);*/
+        /* let interval2 = setInterval(reverse, 200);*/
         let colour1 = divArray[0].css('background-color');
         let colour2 = divArray[1].css('background-color');
         let colour3 = divArray[2].css('background-color');
@@ -196,15 +218,15 @@
         let colour7 = divArray[6].css('background-color');
 
 
-        divArray[5].css('background-color',colour7);
-        divArray[4].css('background-color',colour6);
-        divArray[3].css('background-color',colour5);
-        divArray[2].css('background-color',colour4);
-        divArray[1].css('background-color',colour3);
-        divArray[0].css('background-color',colour2);
-        divArray[6].css('background-color',colour1);
+        divArray[5].css('background-color', colour7);
+        divArray[4].css('background-color', colour6);
+        divArray[3].css('background-color', colour5);
+        divArray[2].css('background-color', colour4);
+        divArray[1].css('background-color', colour3);
+        divArray[0].css('background-color', colour2);
+        divArray[6].css('background-color', colour1);
 
-        if (colour2 == check){
+        if (colour2 == check) {
             /*clearInterval(interval2);*/
             /*clearInterval(interval2);
             localStorage.clear();*/
@@ -213,7 +235,18 @@
         }
     }
 
+    $("#btnPlay").on('click',function (event) {
+        interval1 = setInterval(animateColors, 150);
+        $(this).off(event);
+    });
+
+    $("#btnPause").click(function () {
+        clearInterval(interval2);
+        clearInterval(interval1);
+    });
 
 </script>
+
+
 </body>
 </html>
