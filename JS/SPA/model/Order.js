@@ -1,4 +1,4 @@
-function Order(oId, date, cusId, items, subTotal) {
+function Order(oId, date, cusId, subTotal) {
     this.oId = oId;
     this.date = date;
     this.cusId = cusId;

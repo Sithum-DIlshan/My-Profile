@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-6">
                         <label class="col-form-label" for="orderId">Order Id:</label>
-                        <input class="form-control" id="orderId" readonly type="text" value="O-001">
+                        <input class="form-control" id="orderId" type="text" value="O-001">
                     </div>
                     <div class="col-6">
                         <label class="col-form-label" for="txtDate">Date :</label>
@@ -571,6 +571,7 @@
         if (obj != null) {
             $("#invoiceCusName").val(obj.name);
             $("#invoiceCusSalary").val(obj.salary);
+            $("#invoiceCusAddress").val(obj.address);
 
         }
 
@@ -793,7 +794,8 @@
     $("#purchase").click(function () {
         let balance= parseFloat($("#invoiceBalance").val());
         if ($("#invoiceBalance").val().length != 0 && balance == 0) {
-            let order = new Order($("#orderId").val(), $("#txtDate").val(), $("#invoiceCusId").val(), $("#subTotal").val());
+            let sub = parseFloat($("#subTotal").text().substr(13));
+            let order = new Order($("#orderId").val(), $("#txtDate").val(), $("#invoiceCusId").val(), sub);
             placeOrder(order);
             var oID = incrementOrderId(order.oId);
             $("#orderId").val(oID);
@@ -801,6 +803,28 @@
         }else {
             alert("insufficient credits, try again");
         }
+    });
+
+    $("#orderId").on('keyup', function (e) {
+        if (e.key == "Enter"){
+            var searchOrder1 = searchOrder($("#orderId").val());
+            if (searchOrder1 != null){
+                $("#txtDate").val(searchOrder1.date);
+                $("#selectCusID").val(searchOrder1.cusId);
+                $("#invoiceCusId").val(searchOrder1.cusId);
+                let customer1 = searchCustomer(searchOrder1.cusId);
+
+                $("#invoiceCusName").val(customer1.name);
+                $("#invoiceCusSalary").val(customer1.salary);
+                $("#invoiceCusAddress").val(customer1.address);
+                let subTotal1 = searchOrder1.subTotal;
+                $("#subTotal").text('SubTotal Rs: ' + subTotal1);
+            }
+        }
+    });
+
+    $("#orderId").on('keyup', function () {
+        oIdValid();
     });
 
 

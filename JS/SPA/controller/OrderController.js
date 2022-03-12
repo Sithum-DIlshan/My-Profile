@@ -1,12 +1,15 @@
+const oIDRegEx = /^(O-)[0-9]{1,3}$/;
+
+
 function addItemToCart(cart) {
     let i = isItemExists(cart);
-    if (i > -1){
+    if (i > -1) {
         let pTotal = parseFloat(cartDB[i].cart_qtyOrder);
         let nTotal = parseFloat(cart.cart_qtyOrder);
-        cartDB[i].cart_qtyOrder = pTotal+nTotal;
+        cartDB[i].cart_qtyOrder = pTotal + nTotal;
         loadAllToCart();
         updateItemQty(cart);
-    }else {
+    } else {
         updateItemQty(cart);
         cartDB.push(cart);
         loadAllToCart();
@@ -15,7 +18,7 @@ function addItemToCart(cart) {
 
 function updateItemQty(cart) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (cart.cart_code == itemDB[i].id){
+        if (cart.cart_code == itemDB[i].id) {
             let pQty = parseFloat(itemDB[i].qty);
             let oQty = parseFloat(cart.cart_qtyOrder);
             itemDB[i].qty = pQty - oQty;
@@ -26,7 +29,7 @@ function updateItemQty(cart) {
 
 function isItemExists(cart) {
     for (let i = 0; i < cartDB.length; i++) {
-        if (cartDB[i].cart_code == cart.cart_code){
+        if (cartDB[i].cart_code == cart.cart_code) {
             /*cartDB[i].cart_qtyOrder = cartDB[i].cart_qtyOrder+cart.cart_qtyOrder;
             loadAllToCart();*/
             return i;
@@ -75,4 +78,26 @@ function clearInputsAndTotals() {
     $("#subTotal").text('SubTotal Rs: 0');
     cartDB = [];
     loadAllToCart();
+}
+
+function searchOrder(oId) {
+    for (let i = 0; i < ordersDB.length; i++) {
+        if(oId == ordersDB[i].oId){
+            return ordersDB[i];
+        }
+    }
+    return null;
+}
+
+function oIdValid() {
+    var oId = $("#orderId").val();
+    $("#orderId").css('border', '2px solid green');
+    if (oIDRegEx.test(oId)) {
+        $("#purchase").attr('disabled', false);
+
+    }else {
+        $("#orderId").css('border', '2px solid red');
+        $("#purchase").attr('disabled', true);
+        return false;
+    }
 }
