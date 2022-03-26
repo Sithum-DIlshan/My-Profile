@@ -135,7 +135,9 @@
 
 </style>
 <body>
-<embed src="assets/Knight%20Rider%20-%20Original%20Show%20Intro%20_%20NBC%20Classics.mp3" loop="true" autostart="true" width="2" height="0">
+<div style="display: none">
+<embed src="assets/Knight%20Rider%20-%20Original%20Show%20Intro%20_%20NBC%20Classics.mp3" loop="true" autostart="true">
+</div>
 <div>
     <div>
         <div>
@@ -200,7 +202,7 @@
 
         if (divArray[6].css('background-color') == check) {
             clearInterval(interval1);
-            interval2 = setInterval(reverse, 150);
+            interval1 = setInterval(reverse, 150);
 
 
         }
@@ -230,14 +232,13 @@
             /*clearInterval(interval2);*/
             /*clearInterval(interval2);
             localStorage.clear();*/
-            clearInterval(interval2);
+            clearInterval(interval1);
             interval1 = setInterval(animateColors, 150);
         }
     }
 
     $("#btnPlay").on('click',function (event) {
         interval1 = setInterval(animateColors, 150);
-        $(this).off(event);
     });
 
     $("#btnPause").click(function () {
