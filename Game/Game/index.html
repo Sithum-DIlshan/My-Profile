@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<style>
+    #div1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+        padding: 15px;
+        border: thin solid #D2D2D2;
+    }
+
+    #div2 {
+        position: absolute;
+        width: 50%;
+        margin: 15px;
+        padding: 15px;
+        border: thin solid #D2D2D2;
+    }
+
+    .selected {
+        border: 1px dashed #cccccc !important;
+    }
+
+</style>
+<body>
+<div id='div1'>
+    <input type='text' value='hello'/>
+</div>
+
+<div id='div2'>
+    <label> World</label>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#div1,#div2').click(function () {
+            $('div.selected').removeClass('selected');
+            $(this).addClass('selected');
+
+        })
+    }).keydown(function (e) {
+        var div = $('div.selected');
+        console.log(div);
+        console.log(e.which);
+        switch (e.which) {
+            case 37:
+                $(div).stop().animate({
+                    left: '-=10'
+                }); //left arrow key
+                break;
+            case 38:
+                $(div).stop().animate({
+                    top: '-=10'
+                }); //up arrow key
+                break;
+            case 39:
+                $(div).stop().animate({
+                    left: '+=10'
+                }); //right arrow key
+                break;
+            case 40:
+                $(div).stop().animate({
+                    top: '+=10'
+                }); //bottom arrow key
+                break;
+        }
+    });
+</script>
+</body>
+</html>

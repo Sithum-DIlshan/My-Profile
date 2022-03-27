@@ -1855,11 +1855,24 @@
             border: 0;
         }
     }
+    #container{
+        position: absolute;
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
 </style>
 
 <body>
 <header>
-
+    <div id="container">
+        <img src="assets/loader_gif.gif" alt="">
+    </div>
     <div>
         <div id="textWrapper">
             <h1>Hello, I'm <span>Sithum Dilshan</span> and I'm a Programmer
@@ -2228,7 +2241,15 @@
             </div>
         </div>
     </section>
-</footer>
 
+</footer>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(window).on('load',function () {
+        $("#container").fadeOut(1000);
+    });
+</script>
 </body>
 </html>
